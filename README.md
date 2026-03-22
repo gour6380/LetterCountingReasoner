@@ -100,7 +100,7 @@ The dataset is created programmatically with `Dataset.from_generator`, so no sep
 
 ## How To Run
 
-### Option 1: Vocareum GPU environment
+### Vocareum GPU environment
 
 This is the validated workflow reflected by the stored notebook outputs.
 
@@ -113,16 +113,6 @@ This is the validated workflow reflected by the stored notebook outputs.
 git clone https://github.com/gour6380/LetterCountingReasoner.git
 cd LetterCountingReasoner
 ```
-
-### Option 2: Local macOS workflow
-
-The committed notebook was validated in a pre-provisioned GPU lab environment. It uses `unsloth` and `vllm`, which are typically CUDA-oriented dependencies, so the exact training path in this notebook is not guaranteed to run unchanged on Apple Silicon.
-
-Practical local usage:
-
-- Open the notebook locally to inspect the full implementation and saved outputs.
-- Use a remote GPU environment if you want to reproduce the full GRPO fine-tuning path exactly as written.
-- If you want to adapt the project for Apple Silicon, expect to swap or reconfigure the CUDA-specific pieces rather than running the notebook unchanged.
 
 ## Expected Outputs
 
@@ -140,5 +130,4 @@ After running the notebook in a compatible environment, you should expect:
 
 - The repository does not include a standalone training script; the workflow is notebook-centric.
 - Results are qualitative and sample-based in the stored outputs, not a formal held-out benchmark.
-- The validated execution environment is a cloud GPU lab rather than local Apple Silicon.
 - The saved adapter artifacts are generated during notebook execution and are not committed in this repository.
